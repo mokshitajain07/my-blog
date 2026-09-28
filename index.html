@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h1>MyBlog</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Welcome to My Blog</h2>
+        <p>Ideas, stories and knowledge in one place.</p>
+        <button onclick="scrollToBlogs()">Explore Blogs</button>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search blogs..."
+            onkeyup="searchBlogs()"
+        >
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="blogs">
+        <h2>Latest Blogs</h2>
+
+        <div class="blog-container" id="blogContainer">
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Technology">
+                <div class="blog-content">
+                    <h3>Future of Technology</h3>
+                    <p>
+                        Technology is changing the way we live, work and communicate.
+                    </p>
+                    <button onclick="readMore('Technology is continuously evolving. Artificial intelligence, robotics and smart technologies are shaping our future.')">
+                        Read More
+                    </button>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Travel">
+                <div class="blog-content">
+                    <h3>Beautiful Travel Destinations</h3>
+                    <p>
+                        Discover beautiful places and create unforgettable memories.
+                    </p>
+                    <button onclick="readMore('Travel allows us to explore new cultures, meet new people and experience the beauty of different places.')">
+                        Read More
+                    </button>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80" alt="Healthy Lifestyle">
+                <div class="blog-content">
+                    <h3>Healthy Lifestyle</h3>
+                    <p>
+                        Small daily habits can help you build a healthier lifestyle.
+                    </p>
+                    <button onclick="readMore('A healthy lifestyle includes balanced food, regular exercise, enough sleep and taking care of your mental well-being.')">
+                        Read More
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>About MyBlog</h2>
+        <p>
+            MyBlog is a simple platform where I share ideas, experiences,
+            stories and useful information.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: myblog@example.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyBlog. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span onclick="closePopup()" class="close">&times;</span>
+            <h2>Blog</h2>
+            <p id="popupText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
